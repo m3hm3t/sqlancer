@@ -64,7 +64,7 @@ public class CitusSchema extends PostgresSchema {
             while (rs.next()) {
                 String tableName = rs.getString("table_name");
                 /* citus_tables is a helper view, we don't need to test with it so we let's ignore it */
-                if (tableName.equals("citus_tables")) {
+                if (tableName.equals("citus_tables") || tableName.equals("citus_schemas")) {
                     continue;
                 }
                 String distributionColumnName = rs.getString("dist_col_name");
