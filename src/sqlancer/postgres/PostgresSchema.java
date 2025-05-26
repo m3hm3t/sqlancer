@@ -120,26 +120,33 @@ public class PostgresSchema extends AbstractSchema<PostgresGlobalState, Postgres
             return PostgresDataType.INT;
         case "boolean":
             return PostgresDataType.BOOLEAN;
+        case "regclass":
+             return PostgresDataType.OID;
         case "text":
         case "character":
         case "character varying":
         case "name":
+        case "regnamespace":    
             return PostgresDataType.TEXT;
-        case "regclass":
-        case "regconfig":
-        case "regdictionary":
-        case "regnamespace":
-        case "regrole":
-        case "regtype":
-            return PostgresDataType.OID;
         case "numeric":
             return PostgresDataType.DECIMAL;
-        // …etc…
+        case "double precision":
+            return PostgresDataType.FLOAT;
+        case "real":
+            return PostgresDataType.REAL;
+        case "int4range":
+            return PostgresDataType.RANGE;
+        case "money":
+            return PostgresDataType.MONEY;
+        case "bit":
+        case "bit varying":
+            return PostgresDataType.BIT;
+        case "inet":
+            return PostgresDataType.INET;
         default:
             throw new AssertionError(typeString);
         }
     }
-
 
     public static class PostgresRowValue extends AbstractRowValue<PostgresTables, PostgresColumn, PostgresConstant> {
 
