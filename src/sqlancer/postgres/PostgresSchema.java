@@ -120,13 +120,12 @@ public class PostgresSchema extends AbstractSchema<PostgresGlobalState, Postgres
             return PostgresDataType.INT;
         case "boolean":
             return PostgresDataType.BOOLEAN;
-        case "regclass":
-             return PostgresDataType.OID;
         case "text":
         case "character":
         case "character varying":
         case "name":
-        case "regnamespace":    
+        case "regclass":
+        case "regnamespace":
             return PostgresDataType.TEXT;
         case "numeric":
             return PostgresDataType.DECIMAL;
