@@ -57,6 +57,7 @@ public final class CitusCommon {
         errors.add("indexes not supported for columnar tables");
         errors.add("invalid byte sequence for encoding \"UTF8\": 0x00");
         errors.add("columnar_tuple_insert_speculative not implemented");
+        errors.add("ERROR:.*columnar_tuple_insert_speculative not implemented");
         errors.add("row field count is 1, expected 2");
         errors.add("incorrect binary data format");
         errors.add("invalid sign in external \"numeric\" value");
