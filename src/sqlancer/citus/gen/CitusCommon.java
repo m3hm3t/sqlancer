@@ -62,6 +62,9 @@ public final class CitusCommon {
         errors.add("invalid sign in external \"numeric\" value");
         errors.add("Foreign keys and AFTER ROW triggers are not supported for columnar tables");
 
+        errors.add("temporary columnar tables are not supported");
+        errors.add("temporary tables are not supported for columnar tables");
+
         // current errors in Citus (to be removed once fixed)
         if (CitusBugs.bug3957) {
             errors.add("unrecognized node type: 127");
